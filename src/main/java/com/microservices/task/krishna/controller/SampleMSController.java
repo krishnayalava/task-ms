@@ -15,21 +15,25 @@ public class SampleMSController {
 
     @GetMapping(value="/getData")
     public String getBackenddata(){
-return "Hello Microservice";
+
+        return "Hello Microservice";
     }
 
-    @PostMapping(value = "createData")
-    public void postData(){
-
-    }
-
-    @PutMapping(value = "updateData")
-    public void updateData(){
+    @PostMapping(value = "/createData")
+    public String postBackendData(){
+        return "Return MicroServices";
 
     }
 
-    @DeleteMapping(value = "deleteData")
-    public void deleteData(){
+    @PutMapping(value = "/updateData")
+    public String updateData(){
+        return "Updated MicroServices";
+
+    }
+
+    @DeleteMapping(value = "/deleteData")
+    public String deleteData(){
+        return "Deleted MicroServices";
 
     }
 }
